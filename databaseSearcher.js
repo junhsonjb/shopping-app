@@ -44,6 +44,26 @@ function errData(data) {
   console.log("Cannot find stores in database.");
 }
 
+function eliminateStores(attribs) {
+  if (attribs.includes("Male")) {
+    for (var i = stores.length-1; i > 0; i--) {
+      if (attributes[i].includes("Female") && !attributes[i].includes("Male")) {
+        stores.splice(i, 1);
+        attributes.splice(i, 1);
+        links.splice(i, 1);
+      }
+    }
+  } else if (attribs.includes("Female")) {
+    for (var i = stores.length-1; i > 0; i--) {
+      if (attributes[i].includes("Male") && !attributes[i].includes("Female")) {
+        stores.splice(i, 1);
+        attributes.splice(i, 1);
+        links.splice(i, 1);
+      }
+    }
+  }
+}
+
 function getScores(attribs) {
   for (var i = 0; i < stores.length; ++i) {
     scores[i] = 0;
@@ -59,6 +79,7 @@ function getScores(attribs) {
 
 function showResults() {
     var attribs = attribGoals;
+    eliminateStores(attribs);
     getScores(attribs);
     var newStores = [];
     var newLinks = [];
@@ -85,26 +106,20 @@ function showResults() {
       newLinks.push(maxUrl);
     }
     stores = newStores;
-    console.log(stores);
     links = newLinks;
+    console.log(links);
     for (var i = 1; i <= stores.length; i++) {
       var div = document.getElementById("theDiv");
       var a = document.createElement("a");
       a.id = "l"+i;
-      a.href = links[i-1];
+      a.href = "http://www." + links[i-1];
+      //a.href = links[i-1];
       var b =document.createElement("button");
       b.setAttribute( 'class', 'block' );
       b.innerHTML = stores[i-1];
       //b.Value = stores[i-1];
       a.appendChild(b);
       div.appendChild(a);
-
-      //var element = document.getElementById("l"+i);
-      //console.log(element);
-      //element.href = links[i-1];
-      //var button  = document.getElementById("b"+1);
-      //element.appendChild(button);
-      //button.text = stores[i-1];
     }
     return false;
 }
