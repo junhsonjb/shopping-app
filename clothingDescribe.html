@@ -16,6 +16,8 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
+  <script type="text/javascript" src="controller.js"></script>
+
 
   </head>
 
@@ -55,7 +57,13 @@
           <button id="Large Bust" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Large Bust</button>
         </p>
     	</div>
-      <a href="bestMatches.html"> <button type="button" class="block1">Done!</button> </a> 
+      <script>
+        function doneClicked() {
+          localStorage["attributes"] = addAttributes();
+          window.location.assign("bestMatches.html");
+        }
+      </script>
+      <button type="button" class="block1" onclick="doneClicked()">Done!</button>
 
 
 
