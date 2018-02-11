@@ -1,3 +1,5 @@
+var clothingType;
+
 function addAttributes() {
 	//get a list of all of the button elements in the page
 	var listOfElements = document.getElementsByTagName('button');
@@ -10,4 +12,8 @@ function addAttributes() {
 			attributes.push(listOfElements[i].getAttribute('id'));
 		}
 	}
+}
+
+function selectClothing(clothing) {
+	clothingType = clothing;
 }
