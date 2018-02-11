@@ -37,3 +37,8 @@ body {
 .selected {
   background-color: MediumSeaGreen;
 }
+
+.cannot-click {
+    background-color: #333;
+    color: #FFF
+}

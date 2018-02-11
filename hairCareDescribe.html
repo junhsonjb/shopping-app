@@ -26,12 +26,18 @@
      <script type="text/javascript">
 
       function toggle(id){
+        var tagcount = 0;
+
         var element = document.getElementById(id);
         if (element.classList.contains("selected")){
           element.classList.remove("selected");
+          tagcount--;
         }else{
           element.classList.add("selected");
+          tagcount++;
         }
+
+        return tagcount;
       }
 
       </script>
