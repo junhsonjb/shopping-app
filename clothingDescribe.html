@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <title>Where To Shop</title>
+    <!-- Custom styles for this template -->
+    <link href="clothingDescribe.css" rel="stylesheet" type="text/css">
+ 	<!-- Latest compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  	<!-- jQuery library -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  	<!-- Latest compiled JavaScript -->
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+
+  </head>
+
+  	<body class="text-center align-items-center">
+  	<h1 class="cover-heading">You Are Looking For Clothing! <br> Describe Yourself:</h1>
+    <p class="lead">Please select the buttons that you identify with. Click "Done!"" when you have selected all of the attributes that match.</p>
+
+     <script type="text/javascript">
+
+      function toggle(id){
+        var element = document.getElementById(id);
+        if (element.classList.contains("selected")){
+          element.classList.remove("selected");
+        }else{
+          element.classList.add("selected");
+        }
+      }
+
+      </script>
+  	<p class="lead">
+  		<div id="theDiv">
+          <button id="Tall" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Tall</button>
+          <button id="Plus Size" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Plus Size</button>
+          <button id="Average Build" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Average Build</button>
+          <button id="Short" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Short</button>
+          <button id="Curvy" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Curvy</button>
+          <button id="Male" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Male</button>
+          <button id="Slim" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Slim</button>
+          <button id="Petite" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Petite</button>
+          <button id="Female" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Female</button>
+          <button id="Average Height" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Average Height</button>
+          <button id="Long Legs" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Long Legs</button>
+          <button id="Pear Figure" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Pear Figure</button>
+          <button id="Small Bust" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Small Bust</button>
+          <button id="Short Legs" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Short Legs</button>
+          <button id="Hourglass Figure" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Hourglass Figure</button>
+          <button id="Large Bust" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Large Bust</button>
+        </p>
+    	</div>
+      <a href="bestMatches.html"> <button type="button" class="block1">Done!</button> </a> 
+
+
+
+  	    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

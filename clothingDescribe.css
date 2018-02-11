@@ -1,0 +1,39 @@
+
+body {
+  background-color: CadetBlue !important;
+  height = 100%;
+  width: 1400px !important;
+  border: 25px;
+  padding-top: 50px;
+  margin: auto !important;
+}
+.cover-heading{
+  font-size: 60px;
+}
+.lead{
+  font-size: 50px;
+}
+.block {
+    width: 200px !important;
+    height: 200px !important;
+    border: 50px;
+    background-color: #fff;
+    margin-right: 20px;
+    font-size: 25px;
+    font-color: #fff;
+    text-align: center;
+    border-radius: 50% !important;
+    margin-top: 10px;
+}
+.block1 {
+    width: 20%;
+    border: none;
+    background-color: #fff;
+    padding: 14px 28px;
+    font-size: 20px;
+    font-color: #fff;
+    text-align: center;
+}
+.selected {
+  background-color: MediumSeaGreen;
+}

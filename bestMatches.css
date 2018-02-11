@@ -1,0 +1,27 @@
+
+body {
+  background-color: DarkCyan !important;
+  height = 100%;
+  width: 1400px;
+  border: 25px;
+  padding-top: 50px;
+  margin: auto !important;
+}
+.cover-heading{
+  font-size: 75px;
+}
+.lead{
+  font-size: 50px;
+}
+.block {
+    width: 260px !important;
+    height: 260px !important;
+    border: 50px;
+    background-color: #fff;
+    padding: 20px 28px ;
+    margin-right: 20px;
+    font-size: 40px;
+    font-color: #fff;
+    text-align: center;
+    border-radius: 50% !important;
+}
