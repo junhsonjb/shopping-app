@@ -1,0 +1,43 @@
+<!doctype html>
+<head>
+    <title>testing</title>
+</head>
+<body id="body">
+
+    <button id='Tall' class="selected">Tall</button>
+    <button id='Chunky'>Chunky</button>
+    <button id='Slim'>Slim</button>
+    <button id='Smart' class="selected">Smart?!?!</button>
+    <button id='Complicated'>Complicated</button>
+
+    <p id="test">
+
+    </p>
+
+    <script type="text/javascript">
+        var bodyTag = document.getElementById('body');
+        var buttons = bodyTag.getElementsByTagName('button');
+        var expectedList = addAttributes();
+
+        document.getElementById("test").innerHTML = "HAHAHAHAHAHH IT WORKED";
+
+        document.write(expectedList);
+        /* Now, we know that we have inside of the expectedList, everything
+        that should be in there. We are now able to compare if each the
+        elements are in the model, and if so, use that element as a referral */
+
+        function addAttributes() {
+        	//get a list of all of the button elements in the page
+        	var listOfElements = document.getElementsByTagName('button');
+        	var attributes = [];
+
+        	for (var i = 0; i < listOfElements.length; i++) {
+        		if (listOfElements[i].classList.contains("selected")) {
+        			attributes.push(listOfElements[i].getAttribute('id'));
+        		}
+        	}
+            return attributes;
+        }
+    </script>
+
+</body>
