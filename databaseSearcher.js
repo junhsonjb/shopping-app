@@ -112,10 +112,13 @@ function showResults() {
       var div = document.getElementById("theDiv");
       var a = document.createElement("a");
       a.id = "l"+i;
-      a.href = "http://www." + links[i-1];
-      //a.href = links[i-1];
+      //a.href = "http://www." + links[i-1];
       var b =document.createElement("button");
       b.setAttribute( 'class', 'block' );
+      b.value = links[i-1];
+      b.onclick = function () {
+        window.open("http://www." + this.value, '_blank');
+      };
       b.innerHTML = stores[i-1];
       //b.Value = stores[i-1];
       a.appendChild(b);
