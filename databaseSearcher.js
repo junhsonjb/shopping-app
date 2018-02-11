@@ -1,6 +1,6 @@
 var stores = [];
 var attributes = [];
-var storeScores = [];
+var scores = [];
 var links = [];
 
 var attribGoals = [];
@@ -27,7 +27,9 @@ function gotData(data) {
   stores = [];
   attributes = [];
   links = [];
+  scores =[];
   var db = data.val();
+  console.log(db);
   var sto = Object.keys(db);
   for (var i = 0; i < sto.length; i++) {
     var store = sto[i];
@@ -44,12 +46,12 @@ function errData(data) {
 
 function getScores(attribs) {
   for (var i = 0; i < stores.length; ++i) {
-    storeScores[i] = 0;
+    scores[i] = 0;
   }
   for (var i = 0; i < attribs.length; i++) {
     for (var j = 0; j < stores.length; j++) { 
       if (attributes[j].includes(attribs[i])) {
-        storeScores[j]++;
+        scores[j]++;
       }
     }
   }
@@ -65,17 +67,17 @@ function showResults() {
       var maxStore = null;
       var maxUrl = null;
       for (var j = stores.length-1; j >= 0; j--) {
-        if (storeScores[j] > maxScore) {
+        if (scores[j] > maxScore) {
           if (maxStore != null) {
             stores.push(maxStore);
             scores.push(maxScore);
             links.push(maxUrl);
           }
-          maxScore = storeScores[j];
+          maxScore = scores[j];
           maxStore = stores[j];
           maxUrl = links[j];
-          storeScores.splice(j, 1);
           scores.splice(j, 1);
+          stores.splice(j, 1);
           links.splice(j, 1);
         }
       }
@@ -83,11 +85,26 @@ function showResults() {
       newLinks.push(maxUrl);
     }
     stores = newStores;
+    console.log(stores);
     links = newLinks;
     for (var i = 1; i <= stores.length; i++) {
-      var element = document.getElementById("l"+i);
-      element.href = links[i-1];
-      var button = document.getElementById("b"+i);
-      element.value = stores[i-1];
+      var div = document.getElementById("theDiv");
+      var a = document.createElement("a");
+      a.id = "l"+i;
+      a.href = links[i-1];
+      var b =document.createElement("button");
+      b.setAttribute( 'class', 'block' );
+      b.innerHTML = stores[i-1];
+      //b.Value = stores[i-1];
+      a.appendChild(b);
+      div.appendChild(a);
+
+      //var element = document.getElementById("l"+i);
+      //console.log(element);
+      //element.href = links[i-1];
+      //var button  = document.getElementById("b"+1);
+      //element.appendChild(button);
+      //button.text = stores[i-1];
     }
+    return false;
 }

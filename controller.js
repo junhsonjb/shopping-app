@@ -8,10 +8,11 @@ function addAttributes() {
 	console.log(listOfElements);
 
 	for (var i = 0; i < listOfElements.length; i++) {
-		if (listOfElements[i].contains('selected')) {
+		if (listOfElements[i].classList.contains('selected')) {
 			attributes.push(listOfElements[i].getAttribute('id'));
 		}
 	}
+	return attributes;
 }
 
 function selectClothing(clothing) {
