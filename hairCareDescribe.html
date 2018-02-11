@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <title>Where To Shop</title>
+    <!-- Custom styles for this template -->
+    <link href="hairCareDescribe.css" rel="stylesheet" type="text/css">
+ 	<!-- Latest compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  	<!-- jQuery library -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  	<!-- Latest compiled JavaScript -->
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+
+  </head>
+
+  	<body class="text-center align-items-center">
+  	<h1 class="cover-heading">You Are Looking For Hair Care! <br> Describe Yourself:</h1>
+    <p class="lead">Please select the buttons that describe your hair. Click "Done!"" when you have selected all of the attributes that match.</p>
+
+     <script type="text/javascript">
+
+      function toggle(id){
+        var element = document.getElementById(id);
+        if (element.classList.contains("selected")){
+          element.classList.remove("selected");
+        }else{
+          element.classList.add("selected");
+        }
+      }
+
+      </script>
+  	<p class="lead">
+  		<div id="theDiv">
+          <button id="Curly" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Curly</button>
+          <button id="Straight" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Straight</button>
+          <button id="Long" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Long</button>
+          <button id="Short" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Short</button>
+          <button id="Wavy" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Wavy</button>
+          <button id="Dry" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Dry</button>
+          <button id="Kinky" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Kinky</button>
+          <button id="Oily" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Oily</button>
+          <button id="Low Porosity" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Low Porosity</button>
+          <button id="Thick" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Thick</button>
+          <button id="Coily" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Coily</button>
+          <button id="High Porosity" type="button" class="block" onclick="toggle(this.getAttribute('id'))">High Porosity</button>
+          <button id="Fine" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Fine</button>
+          <button id="Damaged" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Damaged</button>
+          <button id="Healthy" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Healthy</button>
+          <button id="Flat" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Flat</button>
+          <button id="Voluminous" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Voluminous</button>
+        </p>
+    	</div>
+      <a href="bestMatches.html"> <button type="button" class="block1">Done!</button> </a> 
+
+
+
+  	    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

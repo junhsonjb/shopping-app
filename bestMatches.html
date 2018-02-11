@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
+
     <title>Where To Shop</title>
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="bestMatches.css" rel="stylesheet" type="text/css">
  	<!-- Latest compiled and minified CSS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -15,20 +16,31 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script type="text/javascript" src="databaseSearcher.js"></script>
 
   </head>
 
-  <body class="text-center align-items-center"> 
-  	<div id="theDiv">
-  	<h1 class="cover-heading">Where Should You Shop?</h1>
-        <p class="lead">You tell us about yourself and we give you places to shop!</p>
-        <p class="lead">
-          <a href="shoppingFor.html"> <button type="button" class="block">Let's Start</button> </a>
+  	<body class="text-center align-items-center">
+  	<h1 class="cover-heading">Here Are The Places You Can Shop!</h1>
+  	<p class="lead">
+  		<div id="theDiv" style="margin: auto; max-width:1000px">
+            <!-- showResults changes the href and values of <a></a> and <button></button>
+          <a id="l1"> <button id="b1" type="button" class="block">HM</button> </a>
+          <a id="l2"> <button id="b2" type="button" class="block"></button> </a>
+          <a id="l3"> <button id="b3" type="button" class="block"></button> </a>
+          <a id="l4"> <button id="b4" type="button" class="block"></button> </a>
+          <a id="l5"> <button id="b5" type="button" class="block"></button> </a>
+          <a id="l6"> <button id="b6" type="button" class="block"></button> </a> -->
+          <script>
+            console.log(localStorage["attributes"]);
+            loadData(localStorage["attributes"]);
+          </script>
         </p>
-    </div>
+    	</div>
 
 
-    <!-- Bootstrap core JavaScript
+  	    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
