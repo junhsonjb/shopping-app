@@ -27,13 +27,37 @@
 
      <script type="text/javascript">
 
+     var tagcount = 0;
+
       function toggle(id){
+
         var element = document.getElementById(id);
         if (element.classList.contains("selected")){
           element.classList.remove("selected");
+          tagcount--;
         }else{
           element.classList.add("selected");
+          tagcount++;
         }
+
+        var donezo = document.getElementById('donebutton');
+        var clickparagraph = document.getElementById('clickable');
+
+        if (tagcount < 1) {
+            donezo.classList.add("cannot-click");
+            clickable.innerHTML = "Choose some tags first!";
+        } else {
+            donezo.classList.remove("cannot-click");
+            clickable.innerHTML = "";
+        }
+
+      }
+
+      function doneClicked() {
+          if (tagcount >= 1) {
+              localStorage["attributes"] = addAttributes();
+              window.location.assign("bestMatches.html");
+          }
       }
 
       </script>
@@ -57,14 +81,8 @@
           <button id="Large Bust" type="button" class="block" onclick="toggle(this.getAttribute('id'))">Large Bust</button>
         </p>
     	</div>
-      <script>
-        function doneClicked() {
-          console.log("hello");
-          localStorage["attributes"] = addAttributes();
-          window.location.assign("bestMatches.html");
-        }
-      </script>
-      <button type="button" class="block1" onclick="doneClicked()">Done!</button>
+      <button id="donebutton" type="button" class="cannot-click block1" onclick="doneClicked()">Done!</button>
+      <p id="clickable">Choose some tags first!</p>
 
 
 
